@@ -112,3 +112,10 @@ export async function getStatistics(
     next(error);
   }
 }
+
+export function apiResponse(req: Request, res: Response) {
+  res.json({
+    message: "Welcome to the Country API",
+    Author: "Brian Etaghene",
+  });
+}

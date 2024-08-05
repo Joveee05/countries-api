@@ -5,10 +5,12 @@ import {
   getRegions,
   getLanguages,
   getStatistics,
+  apiResponse,
 } from "../controller/country.controller";
 
 const router: Router = Router();
 
+router.get("/", apiResponse);
 router.get("/countries", getCountries);
 router.get("/countries/:id", getCountryById);
 router.get("/languages", getLanguages);

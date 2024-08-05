@@ -17,7 +17,6 @@ export const cacheMiddleware = async (
   next: NextFunction
 ) => {
   const key = req.originalUrl;
-
   try {
     const data = await client.get(key);
 
@@ -28,7 +27,7 @@ export const cacheMiddleware = async (
       next();
     }
   } catch (error) {
-    console.error("[RedisCacheMiddleware] Redis error: ", error);
+    logger.error("[RedisCacheMiddleware] Redis error: ", error);
     next();
   }
 };
@@ -38,5 +37,14 @@ export const setCache = async (key: any, value: any) => {
     await client.setEx(key, 3600, JSON.stringify(value)); // Cache expires in 1 hour
   } catch (error) {
     logger.error("[RedisSetCache] Redis error: ", error);
+  }
+};
+
+export const clearCache = async () => {
+  try {
+    await client.flushAll();
+    logger.info("Redis cache cleared");
+  } catch (error) {
+    logger.error("[RedisclearCache] Redis error: ", error);
   }
 };
