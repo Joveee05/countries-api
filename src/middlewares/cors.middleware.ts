@@ -1,7 +1,8 @@
 import cors from "cors";
 import { Application } from "express";
+import { BASE_URL } from "../config";
 
-const allowedOrigins: string[] = ["http://localhost:3000"];
+const allowedOrigins: string[] = [BASE_URL];
 
 export default function (app: Application) {
   app.use(

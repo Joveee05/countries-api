@@ -1,6 +1,7 @@
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 import { Application } from "express";
+import { BASE_URL } from "../config";
 
 const options = {
   definition: {
@@ -12,7 +13,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:3000/api",
+        url: BASE_URL,
       },
     ],
   },

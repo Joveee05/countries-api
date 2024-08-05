@@ -53,7 +53,7 @@ class CountryService extends RootService {
 
       logger.info("Countries successfully inserted into DataBase");
     } catch (error) {
-      console.error(
+      logger.error(
         "CountryService[fetchAndStoreCountries] processed a request with an error: ",
         error
       );
