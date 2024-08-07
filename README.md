@@ -1,4 +1,4 @@
-# Country Information API
+# Countries Information API
 
 ## Overview
 
@@ -6,7 +6,7 @@ This API provides detailed information about countries, regions, and languages b
 
 This API is hosted at [https://countries-api-jns9.onrender.com/api](https://countries-api-jns9.onrender.com/api).
 
-\*\*Note - This API is hosted as a free instance on [Render](https://render.com) and as a result, it spins down due to inactivity. Initial requests after a period of API inactivity might take 30-50seconds.
+\*\*Note - This API is hosted as a free instance(not a paid one) on [Render](https://render.com) and as a result, it spins down due to inactivity. Initial requests after a period of API inactivity might take 30-50seconds.
 
 ## Table of Contents
 
