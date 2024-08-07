@@ -2,9 +2,9 @@
 
 ## Overview
 
-This API provides detailed information about countries, regions, and languages by fetching and processing data from the REST Countries API. The API supports various endpoints for retrieving country details, aggregated statistics, and language data. The application is built using Node.js, TypeScript, and Express, with MongoDB as the database and Redis for caching.
+This API provides detailed information about countries, regions, and languages by fetching and processing data from the REST Countries API. The API supports various endpoints for retrieving country details, aggregated statistics, and language data. The application was built using Node.js, TypeScript, and Express, with MongoDB as the database and Redis for caching.
 
-The API is hosted at [https://countries-api-jns9.onrender.com/api](https://countries-api-jns9.onrender.com/api).
+This API is hosted at [https://countries-api-jns9.onrender.com/api](https://countries-api-jns9.onrender.com/api).
 
 \*\*Note - This API is hosted as a free instance on [Render](https://render.com) and as a result, it spins down due to inactivity. Initial requests after a period of API inactivity might take 30-50seconds.
 
@@ -80,15 +80,15 @@ npm run test
 
 ## API Endpoints
 
-- GET /api/countries: Retrieve a list of countries with pagination and optional filtering by region or population size.
+- GET /api/countries: Retrieves a list of countries with pagination and optional filtering by region or population size.
 
-- GET /api/countries/:id: Retrieve detailed information for a specific country, including its languages, population, area, and bordering countries.
+- GET /api/countries/:id: Retrieves detailed information for a specific country, including its languages, population, area, and bordering countries.
 
-- GET /api/regions: Retrieve a list of regions and the countries within each region, with additional aggregated data such as the total population of the region.
+- GET /api/regions: Retrieves a list of regions and the countries within each region, with additional aggregated data such as the total population of the region.
 
-- GET /api/languages: Retrieve a list of languages and the countries where they are spoken. Includes the total number of speakers globally for each language.
+- GET /api/languages: Retrieves a list of languages and the countries where they are spoken. Includes the total number of speakers globally for each language.
 
-- GET /api/statistics: Provide aggregated statistics such as the total number of countries, the largest country by area, the smallest by population, and the most widely spoken language.
+- GET /api/statistics: Provides aggregated statistics such as the total number of countries, the largest country by area, the smallest by population, and the most widely spoken language.
 
 ## Implementation Approach
 
