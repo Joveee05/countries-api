@@ -71,7 +71,13 @@ class CountryService extends RootService {
       const skip = (page - 1) * limit;
       const filter: Record<string, any> = {};
 
-      if (region) filter.region = region;
+      if (region) {
+        const formattedInput = region.replace(
+          /^(.)(.*)$/,
+          (match, p1, p2) => p1.toUpperCase() + p2.toLowerCase()
+        );
+        filter.region = formattedInput;
+      }
       if (minPopulation) filter.population = { $gte: Number(minPopulation) };
       if (maxPopulation) filter.population = { $lte: Number(maxPopulation) };
 
