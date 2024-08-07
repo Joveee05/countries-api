@@ -10,7 +10,6 @@ app.use(express.json());
 app.use("/api", countryRoutes);
 setupSwagger(app);
 
-// Mock CountryService methods
 jest.mock("../service/country.service");
 
 describe("Country API", () => {
@@ -52,7 +51,6 @@ describe("Country API", () => {
       expect(countryService.getCountriesByFilter).toHaveBeenCalledTimes(1);
     });
 
-    // Add more integration tests for other endpoints
     describe("GET /api/countries/:id", () => {
       it("should retrieve a country", async () => {
         const mockCountry = {
